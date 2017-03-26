@@ -6,9 +6,11 @@ require 'open-uri'
 require 'uri'
 require 'cgi'
 
-escaped_url =URI.escape("https://www.google.com/search?q="クローラー&utf-8&h1=ja")
+    escaped_url =URI.escape("https://www.google.com/search?q=クローラー&utf-8&h1=ja")
                         doc =NOKOGIRI:HTML(open(escaped_url))
 #検索結果の数
-                        #puts doc.xpath()
-
-}
+    puts doc.xpath("//*[@id='resultStatus'/text()"])
+    doc.xpath('//h3/a').each do[link]
+    puts CGI.parse(link[:href])["adurl"]
+    puts link.content
+end
