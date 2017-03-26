@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby2.0
+#!/usr/local/bin/ruby
 # -*- coding: utf-8 -*-
 
 # Ruby/MySQL を読み込みます。
